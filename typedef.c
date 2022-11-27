@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-// TYPEDEF é um comando que fornece
+// TYPEDEF é um comando que fornece um apelido a um tipo
+// Seguem regras de escopo (podem ser locais ou globais)
 
 /*typedef
 	struct S {

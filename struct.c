@@ -5,7 +5,7 @@
 // Não pode ter funções dentro
 
 struct S {
-	char nome[256];
+	char nome[256];                     // Não podem receber valores na inicialização
 	int idade;
 };
 
@@ -14,6 +14,7 @@ void fill(char *a, char *b);
 int main() {
 	struct S estudante;
 	fill(estudante.nome, "João Pedro");
+
 	estudante.idade = 18;
 
 	printf("%s, %d anos\n", estudante.nome, estudante.idade);
