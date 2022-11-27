@@ -1,7 +1,9 @@
-#include <stdio.h>
+/*
+ * UNION é um conjunto de variáveis que apontam para o mesmo endereço da memória
+ * Podem ser copiados
+ */
 
-// UNION é um conjunto de variáveis que apontam para o mesmo endereço da memória
-// Podem ser copiados
+#include <stdio.h>
 
 union U {
 	char chr[2];                                     // char[2] e short int para corrigir os erros causados pela diferença de # de bytes

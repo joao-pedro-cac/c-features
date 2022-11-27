@@ -1,9 +1,11 @@
-#include <stdio.h>
+/*
+ * STRUCT é um conjunto de variáveis que apontam para diferentes lugares na memória
+ * É a base para o POO (objeto é um "struct+")
+ * Não pode ter funções dentro
+ * Podem ser copiados
+ */
 
-// STRUCT é um conjunto de variáveis que apontam para diferentes lugares na memória
-// É a base para o POO (objeto é um "struct+")
-// Não pode ter funções dentro
-// Podem ser copiados
+#include <stdio.h>
 
 struct S {
 	char nome[256];                     // Não podem receber valores na inicialização

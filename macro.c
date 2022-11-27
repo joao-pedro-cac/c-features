@@ -1,18 +1,23 @@
+/*
+ * Macros são trechos de códigos que são substituídos durante o pré-processamento (antes da compilação)
+ *
+ * Vantagens:
+ *     Podem tornar o código mais legível
+ *     Evita a leitura de dados da memória
+ *     Evita procedimentos que ocorrem ao chamarmos uma função -> execução de código mais rápida
+ *     Parâmetros são genéricos (não possuem tipos) -> aceitam int, float, double, etc.
+ *     Constantes globais
+ *
+ * Desvantagens:
+ *     Não obedecem regras de escopo
+ *     Mais memória comparado a funções
+ *     Podem ser difíceis de usar
+ */
+
+
 #include <stdio.h>
 
-// Macros são trechos de códigos que são substituídos durante o pré-processamento (antes da compilação)
-//
-// Vantagens:
-//     Podem tornar o código mais legível
-//     Evita a leitura de dados da memória
-//     Evita procedimentos que ocorrem ao chamarmos uma função -> execução de código mais rápida
-//     Parâmetros são genéricos (não possuem tipos) -> aceitam int, float, double, etc.
-//     Constantes globais
-//
-// Desvantagens:
-//     Não obedecem regras de escopo
-//     Mais memória comparado a funções
-//     Podem ser difíceis de usar
+
 
 #define PI 3.141592
 #define SOMA(x, y) x + y

@@ -1,11 +1,13 @@
-#include <stdio.h>
+/*
+ * Ao passar uma variável para uma função como parâmetro, apenas seu valor é captado (a variável é inafetada)
+ * No entanto, ao passar um vetor para uma função como parâmetro, sua referência é captada (o vetor é afetado)
+ * Funções não podem retornar vetores
+ * Caso uma matriz n-dimensional seja passada como parâmetro, apenas sua primeira dimensão pode ser vazia
+ *     Ex:
+ *     void printMat(int matriz[][3][3], int X, int Y, int Z);
+ */
 
-// Ao passar uma variável para uma função como parâmetro, apenas seu valor é captado (a variável é inafetada)
-// No entanto, ao passar um vetor para uma função como parâmetro, sua referência é captada (o vetor é afetado)
-// Funções não podem retornar vetores
-// Caso uma matriz n-dimensional seja passada como parâmetro, apenas sua primeira dimensão pode ser vazia
-//     Ex:
-//     void printMat(int matriz[][3][3], int X, int Y, int Z);
+#include <stdio.h>
 
 typedef unsigned int uint;
 
