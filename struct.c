@@ -3,6 +3,7 @@
 // STRUCT é um conjunto de variáveis que apontam para diferentes lugares na memória
 // É a base para o POO (objeto é um "struct+")
 // Não pode ter funções dentro
+// Podem ser copiados
 
 struct S {
 	char nome[256];                     // Não podem receber valores na inicialização
