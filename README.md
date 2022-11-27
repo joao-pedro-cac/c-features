@@ -7,6 +7,7 @@
 - `enum.c`: Enums
 - `function.c`: Functions
 - `macro.c`: Macros
+- `pointer.c`: Pointers
 - `size.c`: Size in bytes of some data types
 - `soma-char.c`: Adding up characters by their ASCII numbers
 - `str.c`: Fancy string input
