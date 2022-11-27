@@ -19,7 +19,7 @@ struct S {
 };
 
 int main() {
-	struct S structure;             // Similar a 'struct S structure;' 
+	struct S structure;             // Similar a 'struct S structure;'
 	
 	structure.a = 1;
 	structure.b = 0;
