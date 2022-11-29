@@ -10,14 +10,20 @@
  *
  * p e q apontam para o mesmo endereço
  *
+ *
+ *
  * Ao passar uma VARIÁVEL como parâmetro de função, copia-se apenas seu VALOR (similar a atribuição, a variável é inafetada)
  * Ao passar um PONTEIRO como parâmetro de função, copia-se seu endereço e a REFERÊNCIA à variável (a variável é afetada)
  *
  * Ponteiros podem apontar para uma posição qualquer de um vetor
- * O endereço da primeira posição de um vetor (&v[0]) pode ser abreviado pelo nome do vetor (v)
+ * O endereço da primeira posição de um vetor (&v[0]) pode ser abreviado pelo nome do vetor (v) ou pelo seu endereço (&v)
  * Ex:
  *     int *p;
- *     p = v;          OU          p = &v[0];
+ *     p = v;          OU          p = &v[0];          OU          p = &v;
+ *
+ * Isso significa que 'v' e '&v' retornam '&v[0]'
+ *
+ *
  *
  * Ao trabalhar com vetores, é possível fazer aritmética de ponteiros
  * Se 'p' é '&v[i]', então 'p + j' é '&v[i + j]' e 'p - j' é '&v[i - j]'
@@ -26,6 +32,9 @@
  *     - Cada elemento de um vetor 'int' ocupa 4 bytes
  *     - Ao somar 1 em um ponteiro 'int *', estamos "pulando" 4 bytes na memória
  *     - O compilador ajusta os detalhes internos de modo que a diferença de 'v[i]' a 'v[i + j]' seja 1 para qualquer tipo de dado
+ *
+ * As expressões '*(v + i)', 'v[0 + i]' e 'v[i]' são equivalentes
+ * As expressões '(v + i)', '&v[0 + i]' e 'v[i]' são equivalentes
  */
 
 #include <stdio.h>
@@ -68,8 +77,8 @@ int main() {
 	
 	// 'h -> dia' equivale a '(*h).dia'
 	printf("DIA: %d\n", h -> dia);           //	printf("DIA: %d\n", hoje.dia);
-	printf("MÊS: %d\n", h -> mes);           //	printf("DIA: %d\n", hoje.mes);
-	printf("ANO: %d\n\n", h -> ano);         //	printf("DIA: %d\n", hoje.ano);
+	printf("MÊS: %d\n", h -> mes);           //	printf("MÊS: %d\n", hoje.mes);
+	printf("ANO: %d\n\n", h -> ano);         //	printf("ANO: %d\n", hoje.ano);
 
 	printf("&DIA: 0x%X\n", hoje.d);          // printf("&DIA: 0x%X\n", &hoje.dia);
 	printf("&MÊS: 0x%X\n", hoje.m);          // printf("&MÊS: 0x%X\n", &hoje.mes);
@@ -84,7 +93,18 @@ int main() {
 	
 	printf("DEPOIS:  var1 = %d\tvar2 = %d\n\n", var1, var2);
 
-	printf("max(var1, var2) = %d\n", *max(&var1, &var2));
+	printf("max(var1, var2) = %d\n\n", *max(&var1, &var2));
+
+	int arr[5] = {1, 2, 3, 4, 5};
+	int *arp = arr;                          // int *arp = &arr[0];
+
+	printf("*arp\t\tADDRESS: 0x%X\n", &arp);
+
+	// Usando aritmética de ponteiros, podemos fazer laços 'for' com ponteiros
+	for (arp; arp < &arr[5]; arp++) {
+		printf("ELEM: %d\t\tADDRESS: 0x%X\n", *arp, arp);
+	}
+
 
 	return 0;
 }
