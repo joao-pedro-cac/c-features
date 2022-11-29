@@ -35,6 +35,19 @@
  *
  * As expressões '*(v + i)', 'v[0 + i]' e 'v[i]' são equivalentes
  * As expressões '(v + i)', '&v[0 + i]' e 'v[i]' são equivalentes
+ *
+ *
+ *
+ * É possível criar ponteiros para ponteiros (**p)
+ * Para acessar o conteúdo de um ponteiro para ponteiro, utilizamos o operador **
+ * Ex:
+ *     char i;
+ *     char *p = &i;
+ *     char **q = &p;
+ *
+ *     **q = 'a';          OU          *p = 'a'          OU          i = 'a';
+ *
+ * O ponteiro 'q' armazena o endereço de 'p', que por sua vez, armazena o endereço de 'i'
  */
 
 #include <stdio.h>
@@ -84,6 +97,8 @@ int main() {
 	printf("&MÊS: 0x%X\n", hoje.m);          // printf("&MÊS: 0x%X\n", &hoje.mes);
 	printf("&ANO: 0x%X\n\n", hoje.a);        // printf("&ANO: 0x%X\n", &hoje.ano);
 
+	////////////////////////////////////////////////////////////////////////////////////////
+
 	int var1 = 8;
 	int var2 = 4;
 
@@ -104,7 +119,18 @@ int main() {
 	for (arp; arp < &arr[5]; arp++) {
 		printf("ELEM: %d\t\tADDRESS: 0x%X\n", *arp, arp);
 	}
+	
+	printf("\n");
 
+	////////////////////////////////////////////////////////////////////////////////////////
+	
+	char val = 0;
+	char *ptr1 = &val;
+	char **ptr2 = &ptr1;                     // Ponteiro para ponteiro
+
+	printf("val:  0x%X\n", ptr1);
+	printf("ptr1: 0x%X\n", ptr2);
+	printf("ptr2: 0x%X\n", &ptr2);
 
 	return 0;
 }
