@@ -3,10 +3,12 @@
 - `address.c`: Variable address
 - `array.c`: Arrays & matrices
 - `blank.c`: ASCII numbers of **\n**, **\0** and **\t**
+- `cast.c`: Type casting
 - `ci.c`: ASCII numbers of characters from **blank space** (32) to **~** (126)
 - `enum.c`: Enums
 - `function.c`: Functions
 - `macro.c`: Macros
+- `mem.c`: Memmory & dynamic allocation
 - `pointer.c`: Pointers
 - `size.c`: Size in bytes of some data types
 - `soma-char.c`: Adding up characters by their ASCII numbers
