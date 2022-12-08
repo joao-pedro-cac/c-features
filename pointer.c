@@ -34,7 +34,7 @@
  *     - O compilador ajusta os detalhes internos de modo que a diferença de 'v[i]' a 'v[i + j]' seja 1 para qualquer tipo de dado
  *
  * As expressões '*(v + i)', 'v[0 + i]' e 'v[i]' são equivalentes
- * As expressões '(v + i)', '&v[0 + i]' e 'v[i]' são equivalentes
+ * As expressões '(v + i)', '&v[0 + i]' e '&v[i]' são equivalentes
  *
  *
  *
