@@ -8,7 +8,7 @@
 - `enum.c`: Enums
 - `function.c`: Functions
 - `macro.c`: Macros
-- `mem.c`: Memmory & dynamic allocation
+- `mem.c`: Memory & dynamic allocation
 - `pointer.c`: Pointers
 - `size.c`: Size in bytes of some data types
 - `soma-char.c`: Adding up characters by their ASCII numbers
