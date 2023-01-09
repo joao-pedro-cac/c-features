@@ -68,7 +68,7 @@
  * A alocação de memória de um vetor possui um limite máximo
  * Ao digitar um número muito grande (ex: 4000000), o programa é encerrado com "segmentation fault"
  * Isso se deve ao fato de que o SO limita o que pode ser alocado na Pilha durante a execução de uma função
- * Esse limite não existe para o Heap (com exeção do limite de memória do computador)
+ * Esse limite não existe para o Heap (com exceção do limite de memória do computador)
  */
 
 #include <stdio.h>
