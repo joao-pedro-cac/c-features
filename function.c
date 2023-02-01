@@ -13,7 +13,6 @@ typedef unsigned int uint;
 
 void vetPlus1(int vetor[], uint size);
 void printArray(int array[], uint size);
-void printPositive(uint v);
 
 int main() {
 	int arr[7] = {1, 2, 3, 4, 5, 6, 7};
@@ -23,10 +22,6 @@ int main() {
 	vetPlus1(arr, 7);
 
 	printArray(arr, 7);
-
-	for (uint i = 0; i < 10; i++)
-		printPositive(i);
-
 	return 0;
 }
 
@@ -46,9 +41,4 @@ void vetPlus1(int vetor[], uint size) {
 	for (int i = 0; i < size; i++) {
 		vetor[i]++;
 	}
-}
-
-void printPositive(uint v) {
-	if (v == 0) return;                                         // Uma função do tipo 'void' retorna NADA, e com isso, é possível usar o comando 'return' sem valor de retorno
-	printf("%u\n", v);
 }
