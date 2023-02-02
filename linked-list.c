@@ -11,8 +11,10 @@
  *
  *
  * Existem diversas variações, como listas circulares, listas duplamente ligadas, listas com nó cabeça, listas com nó sentinela, etc.
- *
- * LISTAS CIRCULARES: o último
+ *     - LISTA CIRCULAR: O último nó aponta para o primeiro
+ *     - LISTA DUPLAMENTE LIGADA: Cada nó aponta para o elemento anterior e posterior
+ *     - LISTA COM NÓ SENTINELA: O último nó é um marcador do fim da lista
+ *     - LISTA COM NÓ CABEÇA: O primeiro nó armazena dados sobre a lista em vez de dados, como a quantidade de nós
  */
 
 #include <stdio.h>
