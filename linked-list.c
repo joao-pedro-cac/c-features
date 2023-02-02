@@ -25,6 +25,7 @@ typedef struct Node Node;
 bool isEmpty(Node *L);
 uint size(Node *L);
 long getIndex(Node *L, Type elem);
+uint count(Node *L, Type elem);
 
 void insertBegin(Node **p, Type v);
 void insertEnd(Node **p, Type v);
@@ -129,15 +130,31 @@ void insertEnd(Node **p, Type v) {
 		*p = item;
 	}
 	else {
-		//Node *aux = *p;
-		//while (aux -> next -> next) aux = aux -> next;
-		//FAZER AQUI
+		Node *aux = *p;
+		while (aux -> next) aux = aux -> next;
+		aux -> next = item;
 	}
 }
 
 
 // Inserir por índice
-void insert(Node **p, Type v, uint index);
+void insert(Node **p, Type v, uint index) {
+	if (index > size(*p)) return;
+
+	if (!index) insertBegin(p, v);
+	else if (index == size(*p)) insertEnd(p, v);
+	else {
+		Node *aux = *p;
+
+		Node *item = (Node *) malloc(TAM);
+		item -> info = v;
+
+		for (uint i = 0; i < index - 1; i++) aux = aux -> next;
+
+		item -> next = aux -> next;
+		aux -> next = item;
+	}
+}
 
 
 
@@ -148,13 +165,62 @@ void insert(Node **p, Type v, uint index);
 
 
 // Remover no início
-Type deleteBegin(Node **p);
+Type deleteBegin(Node **p) {
+	if (!isEmpty(*p)) {
+		Node *aux = *p;
+		*p = (*p) -> next;
+
+		Type v = aux -> info;
+		free(aux);
+
+		return v;
+	}
+}
 
 // Remover no fim
-Type deleteEnd(Node **p);
+Type deleteEnd(Node **p) {
+	if (!isEmpty(*p)) {
+		Node *aux = *p;
+		Node *del = *p;
+		Type v;
+
+		if (aux -> next == NULL) *p = NULL;
+		else {
+			while (aux -> next -> next) aux = aux -> next;
+			del = aux -> next;
+			aux -> next = NULL;
+		}
+
+		v = del -> info;
+		free(del);
+
+		return v;
+	}
+}
 
 // Remover por índice
-Type delete(Node **p, uint index);
+Type delete(Node **p, uint index) {
+	if (index <= size(*p)) {
+		Type v;
+
+		if (!index) v = deleteBegin(p);
+		else if (index == size(*p)) v = deleteEnd(p);
+		else {
+			Node *aux = *p;
+			Node *del;
+
+			for (uint i = 0; i < index - 1; i++) aux = aux -> next;
+
+			del = aux -> next;
+			aux -> next = del -> next;
+
+			v = del -> info;
+			free(del);
+		}
+
+		return v;
+	}
+}
 
 // Apagar toda a lista
 void clear(Node **p) {
