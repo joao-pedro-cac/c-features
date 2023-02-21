@@ -7,6 +7,7 @@
 - `ci.c`: ASCII numbers of characters from **blank space** (32) to **~** (126)
 - `enum.c`: Enums
 - `function.c`: Functions
+- `linked-list.c`: Linked lists
 - `macro.c`: Macros
 - `mem.c`: Memory & dynamic allocation
 - `pointer.c`: Pointers
