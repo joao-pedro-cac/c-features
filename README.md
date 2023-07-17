@@ -1,5 +1,7 @@
 # C Programming Features
 
+**OBS:** All programs are written in Portuguese.
+
 - `address.c`: Variable address
 - `array.c`: Arrays & matrices
 - `blank.c`: ASCII numbers of **\n**, **\0** and **\t**
