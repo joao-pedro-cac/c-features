@@ -13,6 +13,7 @@
 - `macro.c`: Macros
 - `mem.c`: Memory & dynamic allocation
 - `pointer.c`: Pointers
+- `register.c`: _register_ keyword
 - `size.c`: Size in bytes of some data types
 - `soma-char.c`: Adding up characters by their ASCII numbers
 - `str.c`: Fancy string input
