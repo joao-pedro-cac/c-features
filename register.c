@@ -2,7 +2,7 @@
  * CLASSE DE ARMAZENAMENTO: register
  * TEMPO DE VIDA: bloco (stack ou registrador da CPU)
  * ESCOPO: bloco
- * VALOR PADRÃO DE INICIALIZAÇÃO: não-inicializada (a variável declarada começa com lixo)
+ * VALOR PADRÃO DE INICIALIZAÇÃO: não-inicializada (a variável definida começa com lixo)
  *
  * 'register' é uma palavra-chave utilizada na declaração de variáveis
  * Sua função é SUGERIR ao compilador que ele armazene a variável em questão em um registrador ao invés da memória
