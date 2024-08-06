@@ -5,6 +5,7 @@
  * VALOR PADRÃO DE INICIALIZAÇÃO: não-inicializada (a variável definida começa com lixo)
  *
  * 'auto' é uma palavra-chave utilizada para criar variáveis locais
+ * Variáveis automáticas são alocadas e desalocadas automaticamente quando o programa entra e sai de seu escopo
  * Por padrão, toda variável local é uma variável automática
  * Em razão disso, 'auto' é redundante e raramente utilizado
  */
